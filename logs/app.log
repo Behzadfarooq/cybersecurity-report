@@ -1,0 +1,108 @@
+2026-03-04 23:52:08 | INFO | __main__ | Starting ingestion pipeline
+2026-03-04 23:52:08 | INFO | app.etl.pdf_loader | Downloading source PDF
+2026-03-04 23:52:10 | INFO | httpx | HTTP Request: GET https://cyberireland.ie/wp-content/uploads/2022/05/State-of-the-Cyber-Security-Sector-in-Ireland-2022-Report.pdf "HTTP/1.1 200 OK"
+2026-03-04 23:52:11 | INFO | app.etl.pdf_loader | PDF downloaded
+2026-03-04 23:52:20 | INFO | app.etl.extractor | PDF extraction complete
+2026-03-04 23:52:20 | INFO | app.etl.pipeline | ETL pipeline complete
+2026-03-04 23:52:20 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-03-04 23:52:20 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-04 23:52:23 | WARNING | huggingface_hub.file_download | Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-03-04 23:52:36 | WARNING | app.retrieval.vector_store | chromadb not available; using local JSON vector index backend.
+2026-03-04 23:52:39 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-04 23:52:40 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-04 23:52:40 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-04 23:52:40 | INFO | __main__ | Ingestion complete
+2026-03-04 23:54:16 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:54:16 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:54:16 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:54:16 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:54:16 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:54:16 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-04 23:56:31 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:56:31 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:56:31 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:56:31 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:56:31 | INFO | app.agents.tracing | agent_step
+2026-03-04 23:56:31 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-05 00:10:16 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-03-05 00:10:16 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-05 00:10:20 | WARNING | app.retrieval.vector_store | chromadb not available; using local JSON vector index backend.
+2026-03-05 00:10:20 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:20 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:20 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:20 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:42 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:42 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:42 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:42 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:42 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:43 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:43 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:43 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:43 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:10:43 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:31 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-05 00:16:49 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:50 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:50 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:16:50 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:21 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-03-05 00:17:21 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-05 00:17:21 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-03-05 00:17:21 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-05 00:17:26 | WARNING | app.retrieval.vector_store | chromadb not available; using local JSON vector index backend.
+2026-03-05 00:17:26 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:26 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:26 | WARNING | app.agents.query_agent | Unable to extract comparison inputs
+2026-03-05 00:17:26 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:26 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:26 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:56 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:56 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:56 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:56 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:17:56 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:18:07 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:18:07 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:18:07 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:18:07 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:30:02 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-05 00:39:41 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:39:41 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:39:41 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:39:41 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:39:41 | INFO | app.agents.tracing | agent_step
+2026-03-05 00:39:41 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-05 01:24:03 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:24:03 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:24:03 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:24:03 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:24:03 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:24:03 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"
+2026-03-05 01:27:10 | INFO | __main__ | Starting ingestion pipeline
+2026-03-05 01:27:10 | INFO | app.etl.pdf_loader | Using existing local PDF
+2026-03-05 01:33:43 | INFO | app.etl.extractor | PDF extraction complete
+2026-03-05 01:33:43 | INFO | app.etl.pipeline | ETL pipeline complete
+2026-03-05 01:33:43 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-03-05 01:33:43 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-03-05 01:33:47 | WARNING | app.retrieval.vector_store | chromadb not available; using local JSON vector index backend.
+2026-03-05 01:33:48 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-05 01:33:49 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-05 01:33:51 | INFO | app.retrieval.indexer | Indexed chunk batch
+2026-03-05 01:33:51 | INFO | __main__ | Ingestion complete
+2026-03-05 01:57:38 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:57:38 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:57:38 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:57:38 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:57:38 | INFO | app.agents.tracing | agent_step
+2026-03-05 01:57:38 | INFO | httpx | HTTP Request: POST http://testserver/query "HTTP/1.1 200 OK"

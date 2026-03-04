@@ -1,0 +1,509 @@
+
+=== TEST 1 ===
+{
+  "query": "What is the total number of jobs reported, and where exactly is this stated?",
+  "answer": "The report states on page 24: \"FIGURE 5.1 NUMBER OF JOB POSTINGS (DECEMBER 2021)\". This is the strongest directly retrieved evidence for your question.",
+  "citations": [
+    {
+      "chunk_id": "p024-txt000",
+      "page_number": 24,
+      "quote": "FIGURE 5.1 NUMBER OF JOB POSTINGS (DECEMBER 2021)",
+      "source_type": "text"
+    },
+    {
+      "chunk_id": "p018-txt001",
+      "page_number": 18,
+      "quote": "FIGURE 4.1 NUMBER OF CYBER SECURITY EMPLOYEES BY COUNTRY OF ORIGIN 4,046 55% 4,000 3,000 2,101 29% 2,000 1,000 475 6% 253 196 150 120 3% 313%% 2% 2% 10 0% 0 US IRELAND UK REST OF EU JAPAN INDIA CANADA OTHER",
+      "source_type": "text"
+    },
+    {
+      "chunk_id": "p014-txt002",
+      "page_number": 14,
+      "quote": "1M 36% 151 \u00a346M Small (10 \u2013 49 FTEs) 23 (30%) 54 (70%) 77 150 31% 138 129 28% 27% 100 60% 3992% 19% Micro (1 - 9 FTEs) 15 (11%) 122 (89%) 137 40% 64 56 50 13% 11% 0 Total 249 (51%) 240 (49%) 489 Managed Securing Risk, Threat Operational Identification, Other Security Applications, Compliance Intelligence, Technology Authentication Services (e.g.",
+      "source_type": "text"
+    }
+  ],
+  "reasoning_steps": [
+    {
+      "step_number": 1,
+      "trace_id": "6a4979ac-a88b-4b0d-980e-90ef77a98f91",
+      "action": "plan",
+      "detail": "Agent created tool execution plan.",
+      "tool_input": {
+        "query": "What is the total number of jobs reported, and where exactly is this stated?"
+      },
+      "tool_output": {
+        "plan": [
+          {
+            "action": "retrieve",
+            "action_input": {
+              "query": "What is the total number of jobs reported, and where exactly is this stated?",
+              "top_k": 6
+            },
+            "rationale": "Find relevant document evidence first."
+          },
+          {
+            "action": "cite",
+            "action_input": {
+              "limit": 3
+            },
+            "rationale": "Attach verifiable references to answer."
+          },
+          {
+            "action": "finish",
+            "action_input": {},
+            "rationale": "Return final response."
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.031059"
+    },
+    {
+      "step_number": 2,
+      "trace_id": "6a4979ac-a88b-4b0d-980e-90ef77a98f91",
+      "action": "retrieve",
+      "detail": "Retrieved candidate chunks from vector database.",
+      "tool_input": {
+        "query": "What is the total number of jobs reported, and where exactly is this stated?",
+        "top_k": 6
+      },
+      "tool_output": {
+        "results": [
+          {
+            "chunk_id": "p024-txt000",
+            "page": 24,
+            "score": 0.5016
+          },
+          {
+            "chunk_id": "p018-txt001",
+            "page": 18,
+            "score": 0.4516
+          },
+          {
+            "chunk_id": "p014-txt002",
+            "page": 14,
+            "score": 0.4247
+          },
+          {
+            "chunk_id": "p027-tbl000-part000",
+            "page": 27,
+            "score": 0.3891
+          },
+          {
+            "chunk_id": "p019-tbl001-part000",
+            "page": 19,
+            "score": 0.3874
+          },
+          {
+            "chunk_id": "p005-txt002",
+            "page": 5,
+            "score": 0.3789
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.118836"
+    },
+    {
+      "step_number": 3,
+      "trace_id": "6a4979ac-a88b-4b0d-980e-90ef77a98f91",
+      "action": "cite",
+      "detail": "Selected citation snippets from retrieved chunks.",
+      "tool_input": {
+        "limit": 3
+      },
+      "tool_output": {
+        "citations": [
+          {
+            "chunk_id": "p024-txt000",
+            "page": 24
+          },
+          {
+            "chunk_id": "p018-txt001",
+            "page": 18
+          },
+          {
+            "chunk_id": "p014-txt002",
+            "page": 14
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.118836"
+    },
+    {
+      "step_number": 4,
+      "trace_id": "6a4979ac-a88b-4b0d-980e-90ef77a98f91",
+      "action": "finish",
+      "detail": "Generated final grounded response.",
+      "tool_input": {},
+      "tool_output": {
+        "answer_preview": "The report states on page 24: \"FIGURE 5.1 NUMBER OF JOB POSTINGS (DECEMBER 2021)\". This is the strongest directly retrieved evidence for your question.",
+        "citation_pages": [
+          14,
+          18,
+          24
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.118836"
+    }
+  ]
+}
+
+=== TEST 2 ===
+{
+  "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average.",
+  "answer": "The South-West concentration is 44.00 versus a national average of 44.00. That is a difference of 0.00 points and a ratio of 1.00x.",
+  "citations": [
+    {
+      "chunk_id": "p013-txt000",
+      "page_number": 13,
+      "quote": "24 CYBER IRELAND 2022 EDITION STATE OF THE CYBER SECURITY SECTOR IN IRELAND 25 Figure 3.2 shows that 160 (33%) of total firms are dedicated (pure-play) and fully attribute their employment and revenue to activity within the cyber security sector.",
+      "source_type": "text"
+    },
+    {
+      "chunk_id": "p019-tbl000-part000",
+      "page_number": 19,
+      "quote": "| Domestic Firms | 240 | 49% | 2,101 | 29% |",
+      "source_type": "table"
+    },
+    {
+      "chunk_id": "p018-txt002",
+      "page_number": 18,
+      "quote": "Figure 4.2 highlights that employment within Ireland\u2019s cyber security sector is relatively split However, SMEs may also require support to attract between dedicated (pure-play) and diversified talent to their teams, or to nurture internal talent.",
+      "source_type": "text"
+    }
+  ],
+  "reasoning_steps": [
+    {
+      "step_number": 1,
+      "trace_id": "8183ac4c-85e7-4e85-b010-00e7bc5eaca9",
+      "action": "plan",
+      "detail": "Agent created tool execution plan.",
+      "tool_input": {
+        "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average."
+      },
+      "tool_output": {
+        "plan": [
+          {
+            "action": "retrieve",
+            "action_input": {
+              "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average.",
+              "top_k": 6
+            },
+            "rationale": "Find relevant document evidence first."
+          },
+          {
+            "action": "calculate",
+            "action_input": {
+              "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average."
+            },
+            "rationale": "Question requests quantitative reasoning."
+          },
+          {
+            "action": "cite",
+            "action_input": {
+              "limit": 3
+            },
+            "rationale": "Attach verifiable references to answer."
+          },
+          {
+            "action": "finish",
+            "action_input": {},
+            "rationale": "Return final response."
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.118836"
+    },
+    {
+      "step_number": 2,
+      "trace_id": "8183ac4c-85e7-4e85-b010-00e7bc5eaca9",
+      "action": "retrieve",
+      "detail": "Retrieved candidate chunks from vector database.",
+      "tool_input": {
+        "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average.",
+        "top_k": 6
+      },
+      "tool_output": {
+        "results": [
+          {
+            "chunk_id": "p013-txt000",
+            "page": 13,
+            "score": 0.6953
+          },
+          {
+            "chunk_id": "p019-tbl000-part000",
+            "page": 19,
+            "score": 0.6467
+          },
+          {
+            "chunk_id": "p018-txt002",
+            "page": 18,
+            "score": 0.6408
+          },
+          {
+            "chunk_id": "p012-txt000",
+            "page": 12,
+            "score": 0.6399
+          },
+          {
+            "chunk_id": "p018-txt001",
+            "page": 18,
+            "score": 0.6296
+          },
+          {
+            "chunk_id": "p012-txt001",
+            "page": 12,
+            "score": 0.6286
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.160794"
+    },
+    {
+      "step_number": 3,
+      "trace_id": "8183ac4c-85e7-4e85-b010-00e7bc5eaca9",
+      "action": "calculate",
+      "detail": "Ran deterministic calculator tool.",
+      "tool_input": {
+        "query": "Compare the concentration of Pure-Play cybersecurity firms in the South-West against the national average."
+      },
+      "tool_output": {
+        "operation": "comparison",
+        "value": 1.0,
+        "details": {
+          "south_west": 44.0,
+          "national_average": 44.0,
+          "ratio": 1.0,
+          "difference": 0.0
+        },
+        "context": {
+          "south_west": 44.0,
+          "national_average": 44.0
+        }
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.163103"
+    },
+    {
+      "step_number": 4,
+      "trace_id": "8183ac4c-85e7-4e85-b010-00e7bc5eaca9",
+      "action": "cite",
+      "detail": "Selected citation snippets from retrieved chunks.",
+      "tool_input": {
+        "limit": 3
+      },
+      "tool_output": {
+        "citations": [
+          {
+            "chunk_id": "p013-txt000",
+            "page": 13
+          },
+          {
+            "chunk_id": "p019-tbl000-part000",
+            "page": 19
+          },
+          {
+            "chunk_id": "p018-txt002",
+            "page": 18
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.163103"
+    },
+    {
+      "step_number": 5,
+      "trace_id": "8183ac4c-85e7-4e85-b010-00e7bc5eaca9",
+      "action": "finish",
+      "detail": "Generated final grounded response.",
+      "tool_input": {},
+      "tool_output": {
+        "answer_preview": "The South-West concentration is 44.00 versus a national average of 44.00. That is a difference of 0.00 points and a ratio of 1.00x.",
+        "citation_pages": [
+          13,
+          18,
+          19
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.163103"
+    }
+  ]
+}
+
+=== TEST 3 ===
+{
+  "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?",
+  "answer": "Using an initial value of 2,020 jobs and a target of 269,754 jobs over 8 years, the required CAGR is 84.38% per year.",
+  "citations": [
+    {
+      "chunk_id": "p027-txt002",
+      "page_number": 27,
+      "quote": "2024 \u20ac1,431,522,005 9,784 2025 \u20ac1,574,674,206 10,763 2026 \u20ac1,732,141,627 11,839 2027 \u20ac1,905,355,789 13,023 2028 \u20ac2,095,891,368 14,325 2029 \u20ac2,305,480,505 15,758 2030 \u20ac2,536,028,556 (c.",
+      "source_type": "text"
+    },
+    {
+      "chunk_id": "p027-txt001",
+      "page_number": 27,
+      "quote": "at Ireland\u2019s cyber security sector could scale to approximately \u20ac2.5bn in annual GVA and support over 17,000 cyber security roles by 2030, as outlined below: 7.1 INTRODUCTION TABLE 7.1 GROWTH PROJECTIONS (10% CAGR SCENARIO) Ireland is well placed as an enterprise-friendly point of entry into the European Union and is home to a highly-skilled, English-speaking workforce.",
+      "source_type": "text"
+    },
+    {
+      "chunk_id": "p027-txt000",
+      "page_number": 27,
+      "quote": "Applying a 10% annual growth rate to the current estimates suggests that Ireland\u2019s cyber security sector could scale to approximately \u20ac2.5bn in annual GVA and support over 17,000 cyber security roles by 2030, as outlined below: 7.1 INTRODUCTION",
+      "source_type": "text"
+    }
+  ],
+  "reasoning_steps": [
+    {
+      "step_number": 1,
+      "trace_id": "a73976b9-2770-42f6-abed-f33d6f3ad4e8",
+      "action": "plan",
+      "detail": "Agent created tool execution plan.",
+      "tool_input": {
+        "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?"
+      },
+      "tool_output": {
+        "plan": [
+          {
+            "action": "retrieve",
+            "action_input": {
+              "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?",
+              "top_k": 6
+            },
+            "rationale": "Find relevant document evidence first."
+          },
+          {
+            "action": "calculate",
+            "action_input": {
+              "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?"
+            },
+            "rationale": "Question requests quantitative reasoning."
+          },
+          {
+            "action": "cite",
+            "action_input": {
+              "limit": 3
+            },
+            "rationale": "Attach verifiable references to answer."
+          },
+          {
+            "action": "finish",
+            "action_input": {},
+            "rationale": "Return final response."
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.164250"
+    },
+    {
+      "step_number": 2,
+      "trace_id": "a73976b9-2770-42f6-abed-f33d6f3ad4e8",
+      "action": "retrieve",
+      "detail": "Retrieved candidate chunks from vector database.",
+      "tool_input": {
+        "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?",
+        "top_k": 6
+      },
+      "tool_output": {
+        "results": [
+          {
+            "chunk_id": "p027-txt002",
+            "page": 27,
+            "score": 0.447
+          },
+          {
+            "chunk_id": "p027-txt001",
+            "page": 27,
+            "score": 0.4372
+          },
+          {
+            "chunk_id": "p027-txt000",
+            "page": 27,
+            "score": 0.3817
+          },
+          {
+            "chunk_id": "p005-txt001",
+            "page": 5,
+            "score": 0.3662
+          },
+          {
+            "chunk_id": "p024-txt000",
+            "page": 24,
+            "score": 0.3311
+          },
+          {
+            "chunk_id": "p030-txt000",
+            "page": 30,
+            "score": 0.3199
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.199962"
+    },
+    {
+      "step_number": 3,
+      "trace_id": "a73976b9-2770-42f6-abed-f33d6f3ad4e8",
+      "action": "calculate",
+      "detail": "Ran deterministic calculator tool.",
+      "tool_input": {
+        "query": "Based on our 2022 baseline and the stated 2030 job target, what is the required compound annual growth rate (CAGR) to hit that goal?"
+      },
+      "tool_output": {
+        "operation": "cagr",
+        "value": 0.8437501365094562,
+        "details": {
+          "initial": 2020.0,
+          "final": 269754.0,
+          "years": 8.0
+        },
+        "context": {
+          "initial": 2020.0,
+          "final": 269754.0,
+          "years": 8.0,
+          "initial_chunk_id": "p037-txt001",
+          "target_chunk_id": "p037-txt001"
+        }
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.244377"
+    },
+    {
+      "step_number": 4,
+      "trace_id": "a73976b9-2770-42f6-abed-f33d6f3ad4e8",
+      "action": "cite",
+      "detail": "Selected citation snippets from retrieved chunks.",
+      "tool_input": {
+        "limit": 3
+      },
+      "tool_output": {
+        "citations": [
+          {
+            "chunk_id": "p027-txt002",
+            "page": 27
+          },
+          {
+            "chunk_id": "p027-txt001",
+            "page": 27
+          },
+          {
+            "chunk_id": "p027-txt000",
+            "page": 27
+          }
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.244377"
+    },
+    {
+      "step_number": 5,
+      "trace_id": "a73976b9-2770-42f6-abed-f33d6f3ad4e8",
+      "action": "finish",
+      "detail": "Generated final grounded response.",
+      "tool_input": {},
+      "tool_output": {
+        "answer_preview": "Using an initial value of 2,020 jobs and a target of 269,754 jobs over 8 years, the required CAGR is 84.38% per year.",
+        "citation_pages": [
+          27
+        ]
+      },
+      "timestamp_utc": "2026-03-04T18:27:17.244377"
+    }
+  ]
+}
